@@ -1,0 +1,17 @@
+/.docker/mysql/data/
+/.docker/mysql/backup/
+/source/plugins/index.php
+/source/plugins/
+/source/languages/
+/source/litespeed/
+/source/wflogs/
+/source/themes/index.php
+/source/themes/hello-elementor/*
+/source/themes/twenty*
+/source/uploads/
+/source/object-cache.php
+/source/index.php
+/vendor/
+/node_modules/
+.env
+*.zip

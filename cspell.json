@@ -1,0 +1,30 @@
+{
+    "version": "0.2",
+    "ignorePaths": [],
+    "dictionaryDefinitions": [],
+    "dictionaries": [],
+    "words": [
+        "ABSPATH",
+        "autoload",
+        "dashicons",
+        "eicon",
+        "embbedable",
+        "explicite",
+        "hostinger",
+        "litespeed",
+        "mediaqueries",
+        "mediqueries",
+        "ochoarobert",
+        "oembed",
+        "phpcompatibility",
+        "polylang",
+        "staticize",
+        "streann",
+        "unbounce",
+        "wordfence",
+        "wpackagist",
+        "wpforms"
+    ],
+    "ignoreWords": [],
+    "import": []
+}

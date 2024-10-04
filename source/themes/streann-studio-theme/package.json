@@ -1,0 +1,16 @@
+{
+  "name": "streann-studio-theme",
+  "version": "1.0.0",
+  "description": "Streann Studio Theme",
+  "main": "js/functions.js",
+  "author": "Robert Ochoa",
+  "license": "ISC",
+  "dependencies": {
+    "css-combine": "^1.0.0",
+    "minify": "^9.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mergecss": "css-combine css/merger.css > css/merged.css && minify css/merged.css > style.css"
+  }
+}

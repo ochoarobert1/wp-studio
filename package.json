@@ -1,0 +1,18 @@
+{
+  "name": "wp-studio",
+  "version": "1.0.0",
+  "description": "WordPress Docker Environment for Streann Studio",
+  "author": "Robert Ochoa",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "zip-theme": "gulp zip-theme",
+    "mergecss": "css-combine ./source/themes/streann-studio-theme/css/merger.css > ./source/themes/streann-studio-theme/css/merged.css && minify ./source/themes/streann-studio-theme/css/merged.css > ./source/themes/streann-studio-theme/style.css"
+  },
+  "dependencies": {
+    "gulp": "^5.0.0",
+    "gulp-zip": "^6.0.0",
+    "css-combine": "^1.0.0",
+    "minify": "^9.1.0"
+  }
+}

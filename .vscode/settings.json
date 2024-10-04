@@ -1,0 +1,54 @@
+{
+  "cSpell.words": [
+    "automerge",
+    "Bebawy",
+    "booleancheckbox",
+    "callout",
+    "chromeframe",
+    "coredump",
+    "customtypes",
+    "deepmerge",
+    "Ericksen",
+    "extralight",
+    "fieldset",
+    "Hubspot",
+    "humantech",
+    "Kulenych",
+    "ldfdr",
+    "modex",
+    "modusagency",
+    "nohover",
+    "noopener",
+    "noreferrer",
+    "ondemand",
+    "previewable",
+    "Prismic",
+    "reactjs",
+    "rollup",
+    "Signup",
+    "swiper",
+    "tagmanager",
+    "Vogel",
+    "webfont",
+    "xxxs",
+    "yoyo"
+  ],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    ".git": true,
+    "**/.DS_Store": true
+  },
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "PrateekMahendrakar.prettyxml"
+  }
+}

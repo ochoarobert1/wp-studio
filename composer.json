@@ -1,0 +1,68 @@
+{
+    "name": "ochoarobert1/studio",
+    "description": "WordPress Docker Environment for Streann Studio",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Robert Ochoa",
+            "email": "robert@streann.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org",
+            "only": [
+                "wpackagist-plugin/*",
+                "wpackagist-theme/*"
+            ]
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    },
+    "extra": {
+        "installer-paths": {
+            "source/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "source/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "require": {
+        "wpackagist-plugin/404page": "11.4.7",
+        "wpackagist-plugin/better-search-replace": "1.4.7",
+        "wpackagist-plugin/connect-polylang-elementor": "2.4.4",
+        "wpackagist-plugin/dominant-color-images": "1.1.2",
+        "wpackagist-plugin/elementor": "3.24.4",
+        "wpackagist-plugin/header-footer-elementor": "1.6.42",
+        "wpackagist-plugin/hostinger": "3.0.11",
+        "wpackagist-plugin/if-menu": "0.19.0",
+        "wpackagist-plugin/insert-headers-and-footers": "2.2.1",
+        "wpackagist-plugin/litespeed-cache": "6.5.0.2",
+        "wpackagist-plugin/performance-lab": "3.4.1",
+        "wpackagist-plugin/performant-translations": "1.2.0",
+        "wpackagist-plugin/polylang": "3.6.4",
+        "wpackagist-plugin/query-monitor": "^3.16.4",
+        "wpackagist-plugin/unbounce": "1.1.2",
+        "wpackagist-plugin/webp-uploads": "2.2.0",
+        "wpackagist-plugin/wordfence": "7.11.7",
+        "wpackagist-plugin/wordpress-importer": "0.8.2",
+        "wpackagist-plugin/wordpress-seo": "23.5",
+        "wpackagist-theme/hello-elementor": "3.1.1"
+    },
+    "require-dev": {
+        "phpcompatibility/phpcompatibility-wp": "^2",
+        "wpackagist-plugin/query-monitor": "3.16.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    }
+}

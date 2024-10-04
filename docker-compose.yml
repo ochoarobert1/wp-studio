@@ -1,0 +1,60 @@
+version: "3.9"
+name: studio
+services:
+  web:
+    container_name: studio_wp
+    image: wordpress:latest
+    depends_on:
+      - db
+    ports:
+      - 5100:80
+    env_file:
+      - .env
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+      WORDPRESS_TABLE_PREFIX: ${WORDPRESS_TABLE_PREFIX}
+      WORDPRESS_DEBUG: "true"
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_SITEURL', ${WP_SITEURL});
+        define('WP_HOME', ${WP_HOME});
+        define('WP_CACHE', false);
+        define('ENVIRONMENT', 'local');
+    volumes:
+      - ./source/:/var/www/html/wp-content/
+    networks:
+      - studio_network
+  db:
+    container_name: studio_db
+    image: mariadb:latest
+    command: "--default-authentication-plugin=mysql_native_password"
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    networks:
+      - studio_network
+    ports:
+      - 3306:3306
+    volumes:
+      - .docker/mysql/data/:/var/lib/mysql/
+      - .docker/mysql/backup:/docker-entrypoint-initdb.d
+  adminer:
+    container_name: studio_adm
+    image: adminer
+    depends_on:
+      - db
+    networks:
+      - studio_network
+    ports:
+      - 5101:8080
+    environment:
+      UPLOAD_LIMIT: 999M
+networks:
+  studio_network:
+    driver: bridge
