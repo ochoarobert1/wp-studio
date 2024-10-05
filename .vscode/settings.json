@@ -50,5 +50,11 @@
   },
   "[xml]": {
     "editor.defaultFormatter": "PrateekMahendrakar.prettyxml"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
   }
 }
